@@ -1,0 +1,26 @@
+.carta{
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.carta > h2{
+    height: 2rem;
+    width: 11rem;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.carta > img {
+    width:  9rem;
+    height: 6rem;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
