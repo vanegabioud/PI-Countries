@@ -11,8 +11,8 @@ async function traerPaises() {
       nombre: pais.name.common,
       bandera: pais.flags[0],
       continente: pais.continents[0],
-      capital: pais.capital ? pais.capital[0] : "undefined",
-      subregion: pais.subregion,
+      capital: pais.capital ? pais.capital[0] : "No definida",
+      subregion: pais.subregion ? pais.subregion[0] : "No definida",
       area: pais.area,
       poblacion: pais.population,
     };
