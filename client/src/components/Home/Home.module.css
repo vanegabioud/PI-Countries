@@ -1,4 +1,8 @@
 .home {
+  background-image: url("../Img/paisesmundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;

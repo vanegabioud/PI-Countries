@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as ReactRedux from "react-redux";
 import { crearActividad, traerPaises } from "../../actions";
+import style from "./Nueva.module.css";
 
 function Nueva(props) {
   const dispatch = ReactRedux.useDispatch();
@@ -18,13 +19,13 @@ function Nueva(props) {
     let noNumero = /^[A-Za-z]+$/;
     let error = {};
     if (!noNumero.test(input.nombre)) {
-      error.nombre = "nombre solo acepta letras";
+      error.nombre = "el nombre solo acepta letras";
     }
     if (!input.nombre) {
-      error.nombre = "nombre no puede estar vacio";
+      error.nombre = "el nombre no puede estar vacio";
     }
     if (!input.paises.length) {
-      error.paises = "al menos se necesita 1 pais";
+      error.paises = "al menos se necesita un pais";
     }
     return error;
   };
@@ -69,7 +70,7 @@ function Nueva(props) {
 
   const quitar = (e) => {
     e.preventDefault();
-    console.log(e.target.value)
+    console.log(e.target.value);
     setInput({
       ...input,
       paises: input.paises.filter((p) => p !== e.target.value),
@@ -110,59 +111,75 @@ function Nueva(props) {
   };
   return (
     <form
+      className={style.formPrincipal}
       onSubmit={(e) => {
         handleSubmit(e);
       }}
     >
-      <label>nombre</label>
-      <input
-        name="nombre"
-        value={input.nombre}
-        type="text"
-        onChange={(e) => handleInputChange(e)}
-      />
-      {errors.nombre && <p>{errors.nombre}</p>}
-      <label>dificultad</label>
-      <select name="dificultad" onChange={(e) => handleInputChange(e)}>
-        <option value={1}>1</option>
-        <option value={2}>2</option>
-        <option value={3}>3</option>
-        <option value={4}>4</option>
-        <option value={5}>5</option>
-      </select>
-      <label>duracion</label>
-      <select name="duracion" onChange={(e) => handleInputChange(e)}>
-        <option value={15}>15min</option>
-        <option value={30}>30min</option>
-        <option value={45}>45min</option>
-        <option value={60}>60min</option>
-        <option value={90}>+60min</option>
-      </select>
-      <label>temporada</label>
-      <select name="temporada" onChange={(e) => handleInputChange(e)}>
-        <option value="otoño">otoño</option>
-        <option value="invierno">invierno</option>
-        <option value="primavera">primavera</option>
-        <option value="verano">verano</option>
-      </select>
-      <label>paises</label>
-      <select onChange={(e) => handleSelect(e)}>
-        <option></option>
-        {todosPaises.map((p, i) => (
-          <option key={i} value={p.nombre}>
-            {p.nombre}
-          </option>
-        ))}
-      </select>
-      <ul>
-        {input.paises.map((pais, i) => (
-          <li key={i} >
-            {pais} <button value={pais} onClick={(e)=>quitar(e)}>x</button>
-          </li>
-        ))}
-      </ul>
-      {errors.paises && <p>{errors.paises}</p>}
-      <button type="submit">CREAR</button>
+      <div className={style.divSection}>
+        <section>
+          <label>nombre</label>
+          <input
+            name="nombre"
+            value={input.nombre}
+            type="text"
+            onChange={(e) => handleInputChange(e)}
+          />
+          {errors.nombre && <p className={style.errors}>{errors.nombre}</p>}
+          <label>dificultad</label>
+          <select name="dificultad" onChange={(e) => handleInputChange(e)}>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+          </select>
+          <label>duracion</label>
+          <select name="duracion" onChange={(e) => handleInputChange(e)}>
+            <option value={15}>15min</option>
+            <option value={30}>30min</option>
+            <option value={45}>45min</option>
+            <option value={60}>60min</option>
+            <option value={90}>+60min</option>
+          </select>
+          <label>temporada</label>
+          <select name="temporada" onChange={(e) => handleInputChange(e)}>
+            <option value="otoño">OTOÑO</option>
+            <option value="invierno">INVIERNO</option>
+            <option value="primavera">PRIMAVERA</option>
+            <option value="verano">VERANO</option>
+          </select>
+        </section>
+        <section>
+          <label>paises</label>
+          <select onChange={(e) => handleSelect(e)}>
+            <option></option>
+            {todosPaises.map((p, i) => (
+              <option key={i} value={p.nombre}>
+                {p.nombre.toUpperCase()}
+              </option>
+            ))}
+          </select>
+          <ul className={style.ul}>
+            {input.paises.map((pais, i) => (
+              <li key={i}>
+                {pais}
+                <button
+                  className={style.btnx}
+                  value={pais}
+                  onClick={(e) => quitar(e)}
+                >
+                  x
+                </button>
+              </li>
+            ))}
+          </ul>
+          {errors.paises && <p className={style.errors}>{errors.paises}</p>}
+        </section>
+      </div>
+      <button type="submit" className={style.btn}>
+        CREAR ACTIVIDAD
+      </button>
     </form>
   );
 }

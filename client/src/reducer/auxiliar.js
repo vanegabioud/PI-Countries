@@ -12,12 +12,12 @@ export const ordenamientoPor = (tipo, array) => {
     }
     case "Poblacion Asc": {
       return array.sort((a, b) =>
-        a.poblacion > b.poblacion ? -1 : +(a.poblacion < b.poblacion)
+        a.poblacion < b.poblacion ? -1 : +(a.poblacion > b.poblacion)
       );
     }
     case "Poblacion Desc": {
       return array.sort((a, b) =>
-        a.poblacion < b.poblacion ? -1 : +(a.poblacion > b.poblacion)
+        a.poblacion > b.poblacion ? -1 : +(a.poblacion < b.poblacion)
       );
     }
     default: {

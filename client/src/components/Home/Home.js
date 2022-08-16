@@ -6,6 +6,7 @@ import Buscar from "../Buscar/Buscar";
 import Carta from "../Carta/Carta";
 import Paginado from "../Paginado/Paginado";
 import style from "./Home.module.css";
+import Cargando from "../Cargando/Cargando";
 
 function Home() {
   const dispatch = ReactRedux.useDispatch();
@@ -32,8 +33,11 @@ function Home() {
         <div></div>
       )}
       <div className={style.paises}>
-        {pagina === 0
-          ? paises
+        {
+          (paises.length === 0 ? (
+            <Cargando />
+          ) : pagina === 0 ? (
+            paises
               .slice(0, 9)
               .map((pais, i) => (
                 <Carta
@@ -44,7 +48,8 @@ function Home() {
                   key={i}
                 />
               ))
-          : paisPag.map((pais, i) => (
+          ) : (
+            paisPag.map((pais, i) => (
               <Carta
                 id={pais.id}
                 nombre={pais.nombre}
@@ -52,7 +57,9 @@ function Home() {
                 continente={pais.continente}
                 key={i}
               />
-            ))}
+            ))
+          ))
+        }
       </div>
       {paises.length > 0 ? (
         <Paginado pagina={pagina} setPagina={setPagina} paises={paises} />

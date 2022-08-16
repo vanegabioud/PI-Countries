@@ -3,10 +3,12 @@ import * as ReactRedux from "react-redux";
 import { filtroAct, filtroCont, orden, traerActividades } from "../../actions";
 
 function Filtros({ setPagina, setOrden }) {
+
   const dispatch = ReactRedux.useDispatch();
+
   useEffect(() => {
     dispatch(traerActividades());
-  });
+  }, [dispatch]);
 
   const actividades = ReactRedux.useSelector((state) => state.actividades);
 
