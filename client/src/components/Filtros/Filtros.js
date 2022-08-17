@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import * as ReactRedux from "react-redux";
 import { filtroAct, filtroCont, orden, traerActividades } from "../../actions";
+import style from "./Filtros.module.css";
 
 function Filtros({ setPagina, setOrden }) {
 
@@ -31,7 +32,7 @@ function Filtros({ setPagina, setOrden }) {
   };
 
   return (
-    <div>
+    <div className={style.principalD}>
       <select onChange={(e) => continentes(e)}>
         <option value="all">Continente</option>
         <option value="all">Todos</option>

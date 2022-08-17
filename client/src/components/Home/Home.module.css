@@ -21,3 +21,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.barras{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}

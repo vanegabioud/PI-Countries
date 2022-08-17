@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as ReactRedux from "react-redux";
 import { buscarApi, traerPaises } from "../../actions";
+import style from "./Buscar.module.css";
 
 function Buscar({ setPagina }) {
   const dispatch = ReactRedux.useDispatch();
@@ -23,14 +24,14 @@ function Buscar({ setPagina }) {
     setBuscar("");
   };
   return (
-    <form onSubmit={(e) => enviar(e)}>
+    <form onSubmit={(e) => enviar(e)} className={style.formP}>
       <input
         type="text"
         placeholder="Nombre del pais..."
         value={buscar}
         onChange={(e) => busqueda(e)}
       />
-      <button type="submit" onClick={(e) => enviar(e)}>
+      <button type="submit" onClick={(e) => enviar(e)} className={style.btnB}>
         Buscar
       </button>
     </form>

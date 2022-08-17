@@ -25,9 +25,9 @@ function Home() {
   return (
     <div className={style.home}>
       {paises.length > 0 ? (
-        <div>
-          <Filtros setPagina={setPagina} setOrden={setOrden} />
+        <div className={style.barras}>
           <Buscar setPagina={setPagina} />
+          <Filtros setPagina={setPagina} setOrden={setOrden} />
         </div>
       ) : (
         <div></div>
@@ -36,19 +36,21 @@ function Home() {
         {
           (paises.length === 0 ? (
             <Cargando />
-          ) : pagina === 0 ? (
-            paises
-              .slice(0, 9)
-              .map((pais, i) => (
-                <Carta
-                  id={pais.id}
-                  nombre={pais.nombre}
-                  img={pais.bandera}
-                  continente={pais.continente}
-                  key={i}
-                />
-              ))
-          ) : (
+          ) : 
+          // pagina === 0 ? (
+          //   paises
+          //     .slice(0, 9)
+          //     .map((pais, i) => (
+          //       <Carta
+          //         id={pais.id}
+          //         nombre={pais.nombre}
+          //         img={pais.bandera}
+          //         continente={pais.continente}
+          //         key={i}
+          //       />
+          //     ))
+          // ) : 
+          (
             paisPag.map((pais, i) => (
               <Carta
                 id={pais.id}

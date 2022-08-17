@@ -1,0 +1,25 @@
+.formP{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.formP > input{
+    width: 15rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: rgba(230, 230, 230, 0.8);
+    font-weight: bold;
+}
+
+.btnB {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: 0.1px solid grey;
+    background-color: rgba(230, 230, 230, 0.5);
+    cursor: pointer;
+}

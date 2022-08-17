@@ -1,26 +1,64 @@
-.carta{
-    display: flex;
-    flex-direction: column;
-    width: 11rem;
-    height: 10rem;
-    align-items: center;
-    justify-content: center;
+.carta {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+  border: 0.1px solid grey;
+  border-radius: 0.5rem;
+  background-color: rgba(230, 230, 230, 0.3);
+  z-index: 1;
 }
 
-.carta > h2{
-    height: 2rem;
-    width: 11rem;
-    font-size: medium;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
+.link {
+  margin-top: 1rem;
+  display: flex;
+  width: 10rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  z-index: 3;
+  color: #0052cc;
 }
 
-.carta > img {
-    width:  9rem;
-    height: 6rem;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: center;
+.link:hover {
+  display: flex;
+  width: 12rem;
+  font-size: 0.6rem;
+  background-color: rgba(255, 255,255, 0.6);
+  border-radius: 5px;
+  white-space: normal;
+  text-align: center;
+  height: 5rem;
+  align-items: center;
+}
+
+.carta > h2 {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  font-size: medium;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.carta > h3 {
+  font-size: 0.9rem;
+}
+
+.imagen {
+  margin-top: 1rem;
+  display: flex;
+  width: 10rem;
+  height: 5rem;
+
+  align-items: center;
+  justify-content: center;
 }

@@ -1,0 +1,21 @@
+.divPaginado{
+    display: flex;
+    flex-direction: row;
+    gap: 0.05rem;
+    margin-bottom: 1rem;
+}
+
+.divPaginado > button {
+    background-color: rgba(230,230,230, 0.5);
+    border: 0.1px solid gray;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.divPaginado > button:hover{
+    background-color: rgba(255,0,0, 0.4);
+    color: green;
+    font-weight: bold;
+}

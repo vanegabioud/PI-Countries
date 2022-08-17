@@ -1,0 +1,15 @@
+.principalD{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.principalD > select {
+    height: 2rem;
+    font-size: 1.2rem;
+    background-color: rgba(230,230,230, 0.5);
+    border-radius: 7px;
+    border: 0.1px solid gray;
+    font-weight: 420;
+}

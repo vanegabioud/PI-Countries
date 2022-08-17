@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Paginado.module.css";
 
 function Paginado({ pagina, setPagina, paises }) {
   const numeros = [];
@@ -31,7 +32,7 @@ function Paginado({ pagina, setPagina, paises }) {
     }
   };
   return (
-    <div>
+    <div className={style.divPaginado}>
       <button onClick={atras}>Atras</button>
       {numeros.length &&
         numeros.map((num, i) => (
