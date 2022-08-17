@@ -51,7 +51,7 @@ router.get("/", async (req, res) => {
     const todasActividades = await Actividad.findAll({
       include: {
         model: Country,
-        attributes: ["id", "nombre", "bandera", "continente"],
+        attributes: ["id", "nombre", "bandera", "continente","poblacion", "area", "subregion", "capital"],
         trhough: {
           attributes: [],
         },

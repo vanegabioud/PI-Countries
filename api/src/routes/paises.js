@@ -45,7 +45,7 @@ router.get("/", async (req, res) => {
 
         return paisesPorNombre.length
           ? res.status(200).send(paisesPorNombre) //si encuentra coincidencias las devuelvo
-          : res.status(404).send(`No hay coincidencias para name=${name}`); //si no encuentra envio el error
+          : res.status(404).send(`No hay coincidencias para la busqueda de ${name}`); //si no encuentra envio el error
       }
 
       //devuelvo los paises que traje de la api
@@ -61,7 +61,7 @@ router.get("/", async (req, res) => {
 
       return paisesPorNombre.length
         ? res.status(200).send(paisesPorNombre)
-        : res.status(404).send(`No hay coincidencias para name=${name}`);
+        : res.status(404).send(`No hay coincidencias para la busqueda de ${name}`);
     }
     //   console.log(todosPaises);
     //devuelvo todos los paises de la base de datos en el caso de que no este name

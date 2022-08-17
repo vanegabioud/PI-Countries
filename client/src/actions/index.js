@@ -18,8 +18,12 @@ export const ponerPaises = (data) => {
 
 export const traerPaises = () => {
   return async (dispatch) => {
-    const paises = await axios.get("http://localhost:3001/countries");
-    dispatch(ponerPaises(paises.data));
+    try {
+      const paises = await axios.get("http://localhost:3001/countries");
+      dispatch(ponerPaises(paises.data));
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
 
@@ -32,8 +36,12 @@ export const ponerDetalle = (data) => {
 
 export const traerDetalle = (id) => {
   return async (dispatch) => {
-    const pais = await axios.get(`http://localhost:3001/countries/${id}`);
-    dispatch(ponerDetalle(pais.data));
+    try {
+      const pais = await axios.get(`http://localhost:3001/countries/${id}`);
+      dispatch(ponerDetalle(pais.data));
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
 
