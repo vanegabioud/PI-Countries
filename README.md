@@ -1,10 +1,12 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-# Individual Project - Henry Countries
+# Full Stack Individual Project - Henry Countries
 
 <p align="left">
   <img height="200" src="./countries.png" />
 </p>
+
+## Proyecto individual realizado en el bootcamp con las siguientes caracteristicas
+
+---
 
 ## Objetivos del Proyecto
 
@@ -14,7 +16,7 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
+<!-- ## Horarios y Fechas
 
 El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
 
@@ -51,7 +53,7 @@ Versiones:
 
 Está permitido, __bajo su responsabilidad__, actualizar las dependencias a versiones más actuales.
 
-> __IMPORTANTE:__ Versiones mas actuales podrían presentar configuraciones diferentes respecto a las versiones en las que venimos trabajando durante el bootcamp.
+> __IMPORTANTE:__ Versiones mas actuales podrían presentar configuraciones diferentes respecto a las versiones en las que venimos trabajando durante el bootcamp. -->
 
 ## BoilerPlate
 
@@ -71,7 +73,7 @@ Adicionalmente será necesario que creen desde psql una base de datos llamada `c
 
 El contenido de `client` fue creado usando: Create React App.
 
-## Enunciado
+<!-- ## Enunciado
 
 La idea general es crear una aplicación en la cual se pueda ver información de  distintos paises utilizando la api externa [restcountries](https://restcountries.com/) y a partir de ella poder, entre otras cosas:
 
@@ -91,14 +93,23 @@ __IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden ut
 
 A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
 
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
+__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components) -->
 
-#### Tecnologías necesarias
+#### Tecnologías utilizadas
 
 - [ ] React
 - [ ] Redux
 - [ ] Express
 - [ ] Sequelize - Postgres
+
+## Comenzando
+
+Para poder correr localmente el proyecto funcionando es necesario realizar los siguientes pasos una vez que se hicieron las configuraciones previas del archivo `.env` y la creacion de la base de datos en PostgreSQL con el nombre `countries`:
+
+- Ingresar al directorio de api y correr el back con el comando `npm start` desde la consola
+
+- Luego, ingresar al directorio de client y correr el front con el comando `npm start` desde la consola
+
 
 ## Frontend
 
@@ -108,6 +119,10 @@ __Pagina inicial__: deben armar una landing page con
 
 - [ ] Alguna imagen de fondo representativa al proyecto
 - [ ] Botón para ingresar al home (`Ruta principal`)
+
+__Resultado__:
+
+<img src="./Info/landing.png" height="200"/>
 
 __Ruta principal__: debe contener
 
@@ -120,6 +135,10 @@ __Ruta principal__: debe contener
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población
 - [ ] Paginado para ir buscando y mostrando los siguientes paises, 10 paises por pagina, mostrando los primeros 9 en la primer pagina.
 
+__Resultado__:
+
+<img src="./Info/home.png" height="200"/>
+
 __Ruta de detalle de país__: debe contener
 
 - [ ] Los campos mostrados en la ruta principal para cada país (imagen de la bandera, nombre, código de país de 3 letras y continente)
@@ -129,6 +148,10 @@ __Ruta de detalle de país__: debe contener
 - [ ] Área (Mostrarla en km2 o millones de km2)
 - [ ] Población
 - [ ] Actividades turísticas con toda su información asociada
+
+__Resultado__:
+
+<img src="./Info/detalle.png" height="200"/>
 
 __Ruta de creación de actividad turística__: debe contener
 
@@ -140,9 +163,15 @@ __Ruta de creación de actividad turística__: debe contener
 - [ ] Posibilidad de seleccionar/agregar varios países en simultáneo
 - [ ] Botón/Opción para crear una nueva actividad turística
 
-> Es requisito que el formulario de creación esté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre de la actividad no pueda contener símbolos, que la duración no pueda exceder determinado valor, etc.
+__Resultado__:
 
-## Base de datos
+<img src="./Info/crear.png" height="200"/>
+
+<img src="./Info/actividad.png" height="200"/>
+
+<!-- > Es requisito que el formulario de creación esté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre de la actividad no pueda contener símbolos, que la duración no pueda exceder determinado valor, etc. -->
+
+<!-- ## Base de datos
 
 El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
 
@@ -162,13 +191,13 @@ El modelo de la base de datos deberá tener las siguientes entidades (Aquellas p
   - Duración
   - Temporada (Verano, Otoño, Invierno o Primavera)
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que un país puede contener varias actividades turísticas y, a su vez, una actividad turística puede darse en múltiples países. Por ejemplo una actividad podría ser "Ski" que podría ocurrir en Argentina y también en Estados Unidos, pero a su vez Argentina podría también incluir "Rafting".
+La relación entre ambas entidades debe ser de muchos a muchos ya que un país puede contener varias actividades turísticas y, a su vez, una actividad turística puede darse en múltiples países. Por ejemplo una actividad podría ser "Ski" que podría ocurrir en Argentina y también en Estados Unidos, pero a su vez Argentina podría también incluir "Rafting". -->
 
 ## Backend
 
 Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
+<!-- __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes. -->
 
 - [ ] __GET /countries__:
   - En una primera instancia deberán traer todos los países desde restcountries y guardarlos en su propia base de datos y luego ya utilizarlos desde allí (Debe retonar sólo los datos necesarios para la ruta principal)
@@ -184,8 +213,8 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de actividad turística por body
   - Crea una actividad turística en la base de datos, relacionada con los países correspondientes
 
-## Testing
+<!-- ## Testing
 
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos -->
